@@ -5,7 +5,7 @@ const app = express();
 const server = createServer(app);
 
 app.get('/', (req, res) => {
-		res.send('<h1>Hello world</h1>');
+		res.sendFile(new URL('./index.html', import.meta.url).pathname);
 });
 
 server.listen(3000, () => {
